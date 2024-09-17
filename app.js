@@ -15,7 +15,7 @@ const startApp = async () => {
     const app = createServer();
 
 
-    //  Levantamos el aplicativo
+    //Levantamos el aplicativo
 
     app.listen({port: process.env.EXPRESS_PORT, host:process.env.EXPRESS_HOST}, () => {
         console.log(`http://${process.env.EXPRESS_HOST}:${process.env.EXPRESS_PORT}`);

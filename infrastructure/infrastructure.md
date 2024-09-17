@@ -1,24 +1,27 @@
-# INFRASTRUCTURE
+# **Server**
 
-La carpeta de infrastructure contiene dependencias, conexiones a las bases de datos, librerias, configuraciones etc.
-Se encarga de toda la base de la aplicacion y tecnologías utilizadas para levantar la aplicación
+El archivo `server.js` es responsable de manejar todas las rutas de la aplicación. Dado que el proyecto se realiza sin un framework de front-end, este archivo se encarga de gestionar todas las rutas y el uso de archivos necesarios en el proyecto. La función principal de `server.js` es inicializar el servidor, mientras que la configuración y manejo de rutas se realiza aquí.
 
-## server
+### **Responsabilidades:**
+- Manejar todas las rutas de la aplicación.
+- Inicializar y configurar el servidor.
 
-el archivo server.js se encarga de manejar todas las rutas de la aplicación. ya que este proyecto esta realizado sin framework de front-end en el archivo server.js se manejara todas las rutas y el uso de archivos necesarios en el proyecto. En el archivo server.js se crea la función de arranque del servidor, lo único que hace app es inicializarlo.
+## **Middlewares**
 
+En la carpeta `middlewares`, se encuentran archivos que manejan el procesamiento y control de solicitudes. Estos archivos ayudan a gestionar aspectos importantes como errores y limitaciones de solicitudes.
 
+### **Archivos:**
 
-## middlewares 
+- **`errorHandling.js`**:
+  - **Responsabilidad:** Maneja errores de sintaxis en el cuerpo de las solicitudes (request body) sin detener el servidor, permitiendo que el servidor continúe funcionando incluso si hay errores en las solicitudes.
 
-En la carpeta middlewares tenemos 2 archivos. 
+- **`rateLimit.js`**:
+  - **Responsabilidad:** Limita el número de solicitudes que puede recibir el servidor desde una misma IP y bloquea bots para proteger la aplicación de abusos y sobrecargas.
 
-**errorHandling.js**: Este archivo nos permite manejar los errores de sintaxis en el body de las request sin detener el servidor en el proceso
+## **Database**
 
-**rateLimit.js**: Este archivo nos permite limitar las request que puede recibir el servidor de una misma IP, también elimina a los bots la posibilidad de hacer request a nuestro aplicativo.
+La carpeta `database` contiene la configuración y conexión a las bases de datos utilizadas por la aplicación.
 
-
-
-## database
-
-En la carpeta database se encuentra la conexión a las bases de datos.
+### **Responsabilidades:**
+- Gestionar la conexión a las bases de datos.
+- Configurar y mantener las conexiones necesarias para interactuar con la base de datos.
