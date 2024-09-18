@@ -1,0 +1,9 @@
+EXPRESS_PORT=3000
+EXPRESS_HOST="localhost"
+
+MONGO_ACCESS="mongodb://"
+MONGO_USER="mongo"
+MONGO_PWD="mcivYNJWHEcORveRuMvYNUiZOKXEwFsd"
+MONGO_HOST="junction.proxy.rlwy.net"
+MONGO_PORT=52813
+MONGO_DB_NAME="login"

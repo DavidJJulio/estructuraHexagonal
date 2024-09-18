@@ -40,7 +40,7 @@ class User {
     async findByIdAndUpdate(id, updateData, upsert) {
         try {
             let obj = ConnectToDatabase.instanceConnect;
-            const collection = obj.db.collection('cliente');
+            const collection = obj.db.collection('usuarios');
             const res = await collection.updateOne(
                 { _id: new ObjectId(id) },
                 { $set: updateData },
@@ -59,7 +59,7 @@ class User {
     async findByIdAndDelete(id) {
         try {
             let obj = ConnectToDatabase.instanceConnect;
-            const collection = obj.db.collection('cliente');
+            const collection = obj.db.collection('usuarios');
             const res = await collection.deleteMany({ _id: new ObjectId(id) });
             return res;
         } catch (error) {

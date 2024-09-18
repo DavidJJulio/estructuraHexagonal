@@ -15,7 +15,7 @@ La carpeta `model` se encarga de las operaciones básicas relacionadas con la ba
 
 ## **Repository**
 
-La carpeta `repository` actúa como una capa intermedia que ejecuta los métodos definidos en los modelos y valida los resultados. Se encarga de coordinar la interacción entre el dominio y los modelos, asegurando que los datos sean manipulados de manera adecuada.
+La carpeta `repository` actúa como una capa intermedia que ejecuta los métodos definidos en los modelos y valida los resultados. Se encarga de coordinar la interacción entre el dominio y los modelos, asegurando que los datos sean manipulados de manera adecuada. Por ejemplo en el repositorio puede haber un metodo, que ejecute una consulta utilizando un método definido en el modelo.
 
 ### **Archivo: `userRepository.js`**
 - **Responsabilidad:** Ejecuta los métodos declarados en `userModel.js`, maneja las consultas a la base de datos y valida las respuestas para garantizar que cumplan con los requisitos de la aplicación.

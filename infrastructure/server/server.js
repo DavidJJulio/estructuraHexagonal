@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const { jsonParseErrorHandler } = require('../middlewares/errorHandling');
 const { limiTotal } = require('../middlewares/rateLimit');
+const userRepository = require('../../domain/repository/userRepository')
 
 
 
@@ -12,6 +13,8 @@ const createServer = () => {
 
     const app = express();
     app.use(express.json());
+
+    const user = new userRepository()
 
     //  jsonParseErrorHandler: 
     //
@@ -29,13 +32,11 @@ const createServer = () => {
 
     //Utilizamos los archivos estaticos, para poder levantar el front-end
     
-    app.use('/css', express.static(path.join(__dirname, 'css')));
-    app.use('/js', express.static(path.join(process.env.EXPRESS_STATIC, 'js')));
-    app.use('/storage', express.static(path.join(process.env.EXPRESS_STATIC, 'storage')));
+    // app.use('/css', express.static(path.join(__dirname, 'css')));
+    // app.use('/js', express.static(path.join(process.env.EXPRESS_STATIC, 'js')));
+    // app.use('/storage', express.static(path.join(process.env.EXPRESS_STATIC, 'storage')));
 
     //Aqui utilizamos todas las rutas que tenemos definidas
-
-
     
     return app;
 };

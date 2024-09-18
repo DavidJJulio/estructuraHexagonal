@@ -22,4 +22,6 @@ const startApp = async () => {
     });
 };
 
+console.log("hola")
+
 startApp();
